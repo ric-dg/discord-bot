@@ -46,10 +46,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.post(`${process.env.APP_URL}/bind`, payload, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while binding your account., Please try again later or contact server admin! my bad my bad.. <:crying_cat:123456789012345678>');
             }
             break;
@@ -68,10 +68,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.post(`${process.env.APP_URL}/bind`, payload, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while binding your account., Please try again later or contact server admin! my bad my bad.. <:crying_cat:123456789012345678>');
             }
             break;
@@ -89,10 +89,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.post(`${process.env.APP_URL}/set-time`, payload, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while logging timestamps., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -110,10 +110,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.post(`${process.env.APP_URL}/set-time`, payload, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while logging timestamps., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -123,10 +123,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/attendance`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching attendance., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -140,10 +140,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/attendance-by-date?signature=${date}`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching attendance., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -156,10 +156,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/absent`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching absent(s)., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -173,10 +173,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/absent-by-date?signature=${date}`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching absent(s)., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -189,10 +189,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/attendance-intern`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching attendance., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
@@ -205,10 +205,10 @@ client.on('interactionCreate', async (interaction) => {
                 const res = await axios.get(`${process.env.APP_URL}/absent-intern`, { headers });
                 interaction.reply(`${res.data}`);
             } catch (err) {
-                if (err.response.status === 401) {
+                if (err.response?.status === 401) {
                     interaction.reply('Invalid Signature, Please contact server admin!. <:crying_cat:123456789012345678>')
                 }
-                console.error(err.response);
+                console.error(err.response?);
                 interaction.reply('An error occurred while fetching absent(s)., Please try again later or contact server admin! my bad my bad..  <:crying_cat:123456789012345678>');
             }
             break;
